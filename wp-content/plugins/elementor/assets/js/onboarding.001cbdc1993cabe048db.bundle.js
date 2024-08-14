@@ -1,4 +1,4 @@
-/*! elementor - v3.22.0 - 26-06-2024 */
+/*! elementor - v3.23.0 - 05-08-2024 */
 "use strict";
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["onboarding"],{
 
@@ -1273,7 +1273,7 @@ function Account() {
   if (state.isLibraryConnected) {
     pageTexts = {
       firstLine: /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, __('To get the most out of Elementor, we\'ll help you take your', 'elementor'), " ", /*#__PURE__*/_react.default.createElement("br", null), " ", __('first steps:', 'elementor')),
-      listItems: elementorAppConfig.onboarding.experiment ? [__('Set your site\'s theme', 'elementor'), __('Chose additional features', 'elementor'), __('Choose how to start creating', 'elementor')] : [__('Set your site\'s theme', 'elementor'), __('Give your site a name & logo', 'elementor'), __('Choose how to start creating', 'elementor')]
+      listItems: elementorAppConfig.onboarding.experiment ? [__('Set your site\'s theme', 'elementor'), __('Choose additional features', 'elementor'), __('Choose how to start creating', 'elementor')] : [__('Set your site\'s theme', 'elementor'), __('Give your site a name & logo', 'elementor'), __('Choose how to start creating', 'elementor')]
     };
   } else {
     pageTexts = elementorAppConfig.onboarding.experiment ? {
@@ -2635,4 +2635,4 @@ exports.setSelectedFeatureList = setSelectedFeatureList;
 /***/ })
 
 }]);
-//# sourceMappingURL=onboarding.d6ea272a04bd56212e9d.bundle.js.map
+//# sourceMappingURL=onboarding.001cbdc1993cabe048db.bundle.js.map

@@ -1,4 +1,4 @@
-/*! elementor - v3.22.0 - 26-06-2024 */
+/*! elementor - v3.23.0 - 05-08-2024 */
 "use strict";
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["video"],{
 
@@ -63,7 +63,10 @@ class Video extends elementorModules.frontend.handlers.Base {
     if (lazyLoad) {
       $videoIframe.attr('src', lazyLoad);
     }
-    $videoIframe[0].src = this.apiProvider.getAutoplayURL($videoIframe[0].src);
+    if (this.getElementSettings('autoplay')) {
+      $videoIframe.attr('allow', 'autoplay');
+      $videoIframe[0].src = this.apiProvider.getAutoplayURL($videoIframe[0].src);
+    }
   }
   async animateVideo() {
     const lightbox = await elementorFrontend.utils.lightbox;
@@ -178,4 +181,4 @@ exports["default"] = Video;
 /***/ })
 
 }]);
-//# sourceMappingURL=video.57bb05ea17924bda3c02.bundle.js.map
+//# sourceMappingURL=video.817bd6a65a1542503aac.bundle.js.map

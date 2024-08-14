@@ -1,4 +1,4 @@
-/*! elementor - v3.22.0 - 26-06-2024 */
+/*! elementor - v3.23.0 - 05-08-2024 */
 (self["webpackChunkelementor"] = self["webpackChunkelementor"] || []).push([["modules_nested-tabs_assets_js_editor_module_js"],{
 
 /***/ "../modules/nested-tabs/assets/js/editor/module.js":
@@ -122,7 +122,8 @@ var View = /*#__PURE__*/function (_$e$components$get$ex) {
         'data-tab-index': index,
         style: '--n-tabs-title-order: ' + index + ';'
       });
-      if (1 === index) {
+      var isInitialLoad = elementor.previewView.isBuffering;
+      if (isInitialLoad && 1 === index) {
         childView.$el.addClass('e-active');
       }
     }
@@ -310,4 +311,4 @@ module.exports = toPropertyKey, module.exports.__esModule = true, module.exports
 /***/ })
 
 }]);
-//# sourceMappingURL=4586b3ce03181d93c8bf.bundle.js.map
+//# sourceMappingURL=f634673e5824ceb13f3d.bundle.js.map
