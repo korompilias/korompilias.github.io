@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.21.0 - 24-04-2024 */
+/*! elementor-pro - v3.23.0 - 05-08-2024 */
 "use strict";
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["mega-menu-editor"],{
 
@@ -140,8 +140,43 @@ class View extends $e.components.get('nested-elements').exports.NestedView {
       id: 'e-n-menu-content-' + widgetNumber + '' + index,
       role: 'menu',
       'aria-labelledby': tabId,
-      'data-tab-index': index,
-      style: '--n-menu-title-order: ' + index + ';'
+      'data-tab-index': index
+    });
+  }
+  getChildViewContainer(containerView, childView) {
+    const {
+      elements_placeholder_selector: customSelector,
+      child_container_placeholder_selector: childContainerSelector
+    } = this.model.config.defaults;
+    if (childView !== undefined && childView._index !== undefined && childContainerSelector) {
+      return containerView.$el.find(`${childContainerSelector}`)[childView._index];
+    }
+    if (customSelector) {
+      return containerView.$el.find(this.model.config.defaults.elements_placeholder_selector);
+    }
+    return super.getChildViewContainer(containerView, childView);
+  }
+  attachBuffer(compositeView, buffer) {
+    const $container = this.getChildViewContainer(compositeView);
+    if (this.model?.config?.support_improved_repeaters && this.model?.config?.is_interlaced) {
+      const childContainerSelector = this.model?.config?.defaults?.child_container_placeholder_selector || '',
+        childContainerClass = childContainerSelector.replace('.', '');
+      this._updateChildContainers($container[0], childContainerClass, buffer);
+    } else {
+      $container.append(buffer);
+    }
+  }
+  _updateChildContainers(wrapper, childContainerClass, buffer, index = 0) {
+    _.each(wrapper.children, childContainer => {
+      if (childContainer.classList?.contains(childContainerClass)) {
+        const numberOfItems = buffer.childNodes.length;
+        childContainer.appendChild(buffer.childNodes[0]);
+        buffer.appendChild(childContainer);
+        wrapper.append(buffer.childNodes[numberOfItems - 1]);
+        index++;
+      } else {
+        this._updateChildContainers(childContainer, childContainerClass, buffer, index);
+      }
     });
   }
 }
@@ -150,4 +185,4 @@ exports["default"] = View;
 /***/ })
 
 }]);
-//# sourceMappingURL=mega-menu-editor.bbef3f7412481cbce555.bundle.js.map
+//# sourceMappingURL=mega-menu-editor.88e3947c99f378d080db.bundle.js.map

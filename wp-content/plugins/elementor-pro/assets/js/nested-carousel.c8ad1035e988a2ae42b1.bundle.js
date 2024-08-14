@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.21.0 - 24-04-2024 */
+/*! elementor-pro - v3.23.0 - 05-08-2024 */
 "use strict";
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["nested-carousel"],{
 
@@ -50,6 +50,13 @@ class NestedCarousel extends elementorModules.frontend.handlers.CarouselBase {
     }
     this.ranElementHandlers = false;
   }
+  async initSwiper() {
+    const Swiper = elementorFrontend.utils.swiper;
+    this.swiper = await new Swiper(this.elements.$swiperContainer, this.getSwiperSettings());
+
+    // Expose the swiper instance in the frontend
+    this.elements.$swiperContainer.data('swiper', this.swiper);
+  }
   handleElementHandlers() {
     if (this.ranElementHandlers || !this.swiper) {
       return;
@@ -59,7 +66,7 @@ class NestedCarousel extends elementorModules.frontend.handlers.CarouselBase {
     this.ranElementHandlers = true;
   }
   wrapSlideContent() {
-    if (!elementorFrontend.isEditMode()) {
+    if (!elementorFrontend.isEditMode() && elementorFrontend.config.experimentalFeatures.e_nested_atomic_repeaters) {
       return;
     }
     const settings = this.getSettings(),
@@ -111,7 +118,7 @@ class NestedCarousel extends elementorModules.frontend.handlers.CarouselBase {
       element.swiper.init();
     }
   }
-  linkContainer(event) {
+  async linkContainer(event) {
     const {
         container,
         index,
@@ -141,9 +148,21 @@ class NestedCarousel extends elementorModules.frontend.handlers.CarouselBase {
       if (undefined !== carouselItemWrapper) {
         carouselItemWrapper.appendChild(contentContainer);
       }
+      this.shouldHideNavButtons(view, $slides);
       this.updateIndexValues($slides);
+      const isSwiperActive = this.swiper && !this.swiper.destroyed,
+        hasMultipleSlides = $slides.length > 1;
+      if (!isSwiperActive && hasMultipleSlides) {
+        await this.initSwiper();
+      } else if (isSwiperActive && !hasMultipleSlides) {
+        this.swiper.destroy(true);
+      }
       this.updateListeners();
     }
+  }
+  updateListeners() {
+    this.swiper.initialized = false;
+    this.swiper.init();
   }
   move(view, index, targetContainer, slides) {
     return [slides[index], targetContainer.view.$el[0]];
@@ -157,13 +176,20 @@ class NestedCarousel extends elementorModules.frontend.handlers.CarouselBase {
       element.setAttribute('data-slide', newIndex);
     });
   }
-  updateListeners() {
-    this.swiper.initialized = false;
-    this.swiper.init();
-  }
   bindEvents() {
     super.bindEvents();
     elementorFrontend.elements.$window.on('elementor/nested-container/atomic-repeater', this.linkContainer.bind(this));
+  }
+  shouldHideNavButtons(view, $slides) {
+    const widget = view[0],
+      navButtons = widget.querySelectorAll('.elementor-swiper-button'),
+      shouldHide = 1 === $slides.length,
+      isHidden = navButtons[0]?.classList.contains('hide');
+    if (shouldHide !== isHidden) {
+      navButtons.forEach(button => {
+        button.classList.toggle('hide', shouldHide);
+      });
+    }
   }
 }
 exports["default"] = NestedCarousel;
@@ -171,4 +197,4 @@ exports["default"] = NestedCarousel;
 /***/ })
 
 }]);
-//# sourceMappingURL=nested-carousel.a6b8a103e170cb2de9a4.bundle.js.map
+//# sourceMappingURL=nested-carousel.c8ad1035e988a2ae42b1.bundle.js.map

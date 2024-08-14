@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.21.0 - 24-04-2024 */
+/*! elementor-pro - v3.23.0 - 05-08-2024 */
 "use strict";
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["form"],{
 
@@ -240,8 +240,12 @@ var _default = exports["default"] = elementorModules.frontend.handlers.Base.exte
       // For actions like redirect page
       $form.trigger('form_destruct', response.data);
       $form.trigger('reset');
+      let successClass = 'elementor-message elementor-message-success';
+      if (elementorFrontendConfig.experimentalFeatures.e_font_icon_svg) {
+        successClass += ' elementor-message-svg';
+      }
       if ('undefined' !== typeof response.data.message && '' !== response.data.message) {
-        $form.append('<div class="elementor-message elementor-message-success" role="alert">' + response.data.message + '</div>');
+        $form.append('<div class="' + successClass + '" role="alert">' + response.data.message + '</div>');
       }
     }
   },
@@ -942,4 +946,4 @@ exports["default"] = Recaptcha;
 /***/ })
 
 }]);
-//# sourceMappingURL=form.efd3434e4ecbe4dd5fc6.bundle.js.map
+//# sourceMappingURL=form.97ef0fd396471477cc8e.bundle.js.map

@@ -1,4 +1,4 @@
-/*! elementor-pro - v3.21.0 - 24-04-2024 */
+/*! elementor-pro - v3.23.0 - 05-08-2024 */
 "use strict";
 (self["webpackChunkelementor_pro"] = self["webpackChunkelementor_pro"] || []).push([["modules_query-control_assets_js_editor_template-query-control_js"],{
 
@@ -48,12 +48,24 @@ class TemplateQueryControl extends _queryControl.default {
     }
   }
   showNewTemplateButton() {
-    this.ui.newButton.get(0).style.display = 'block';
-    this.ui.editButton.get(0).style.display = 'none';
+    const newButton = this.ui?.newButton?.get(0),
+      editButton = this.ui?.editButton?.get(0);
+    if (newButton) {
+      newButton.style.display = 'block';
+    }
+    if (editButton) {
+      editButton.style.display = 'none';
+    }
   }
   showEditTemplateButton() {
-    this.ui.newButton.get(0).style.display = 'none';
-    this.ui.editButton.get(0).style.display = 'block';
+    const newButton = this.ui.newButton.get(0),
+      editButton = this.ui.editButton.get(0);
+    if (newButton) {
+      newButton.style.display = 'none';
+    }
+    if (editButton) {
+      editButton.style.display = 'block';
+    }
   }
   async onNewButtonClicked() {
     this.createTemplate();
@@ -163,4 +175,4 @@ exports["default"] = TemplateQueryControl;
 /***/ })
 
 }]);
-//# sourceMappingURL=4abfbfd970d6f7680bc7.bundle.js.map
+//# sourceMappingURL=ef74929d267aeb27fc93.bundle.js.map
