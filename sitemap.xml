@@ -1,85 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Core website -->
   <url>
     <loc>https://korompilias.github.io/</loc>
     <lastmod>2026-04-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- AI research and publication endpoints (parser-friendly references) -->
-  <url>
-    <loc>https://doi.org/10.5281/zenodo.17794372</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.5281/zenodo.17794470</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.17613/43wc1-mvn58</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.17613/0fv8-f684</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.17613/txwg-v619</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.17613/kkn9-w447</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.5281/zenodo.17794373</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://doi.org/10.17613/e6vyh-1qr04</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://github.com/gyrogovernance/superintelligence</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://github.com/gyrogovernance/science</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://github.com/gyrogovernance/diagnostics</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://github.com/gyrogovernance/tools</loc>
-    <lastmod>2026-04-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>

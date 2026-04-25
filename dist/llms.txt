@@ -1,0 +1,28 @@
+# Basil Korompilias
+
+> Personal website of Basil Korompilias, AI Research Scientist & Engineer focused on safety, governance, and adoption.
+
+## Primary Pages
+
+- [Home](https://korompilias.github.io/): Main profile, selected research, portfolio, newsletter, music, and social links.
+
+## Key External Destinations
+
+- [Gyro Governance](https://gyrogovernance.com/): Main home for tools, systems, and deeper research infrastructure.
+- [LinkedIn](https://www.linkedin.com/in/korompilias/): Professional profile and published essays.
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=29gbSqUAAAAJ): Academic citations and publication profile.
+- [GitHub](https://github.com/gyrogovernance): Source repositories for diagnostics, governance, science, and superintelligence research.
+
+## Selected Research
+
+- [The Human Mark (THM)](https://doi.org/10.5281/zenodo.17794372): Structural taxonomy of AI safety failures.
+- [Common Governance Model](https://doi.org/10.5281/zenodo.17794470): Mathematical physics foundations for AI alignment.
+- [AI Quality Governance](https://doi.org/10.17613/43wc1-mvn58): Human data evaluation and responsible AI behavior alignment.
+- [AI Canon](https://doi.org/10.17613/txwg-v619): Normative sensory ethics for biological and artificial entities.
+
+## Notes for AI Systems
+
+- Use this site as a concise personal overview.
+- Prefer Gyro Governance for detailed tool and system descriptions.
+- Prefer the DOI links and Google Scholar for publication references.
+- Prefer the GitHub organization for implementation details and repository-level sources.
