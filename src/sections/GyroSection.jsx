@@ -17,6 +17,8 @@ export function GyroSection() {
               }}
               className="feature-banner__logo"
               alt="Gyro Governance logo"
+              width={92}
+              height={92}
             />
           </div>
           <h2>Gyro Governance</h2>
