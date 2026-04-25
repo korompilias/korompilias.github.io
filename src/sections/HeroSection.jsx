@@ -13,13 +13,15 @@ export function HeroSection() {
           <div className="hero-shell__photo" aria-hidden="true">
             <ResponsiveImage
               image={{
-                src: "/assets/images/1708762919806-768x768.webp",
+                src: "/assets/images/1708762919806-300x300.webp",
                 srcSet:
-                  "/assets/images/1708762919806-768x768.webp 768w, /assets/images/1708762919806-scaled.webp 2048w",
+                  "/assets/images/1708762919806-300x300.webp 300w, /assets/images/1708762919806-600x600.webp 600w",
                 sizes: "(max-width: 760px) calc(100vw - 44px), 262px",
               }}
               alt=""
               className="hero-shell__photo-image"
+              width={262}
+              height={262}
               fetchPriority="high"
               loading="eager"
               decoding="async"
@@ -36,6 +38,9 @@ export function HeroSection() {
             </p>
             <div className="hero-shell__actions">
               <ActionButton href="https://www.linkedin.com/in/korompilias/">LinkedIn Bio</ActionButton>
+              <ActionButton href="https://scholar.google.com/citations?hl=en&user=29gbSqUAAAAJ">
+                Google Scholar
+              </ActionButton>
             </div>
           </div>
         </div>

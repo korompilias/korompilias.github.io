@@ -1,10 +1,10 @@
 export const quickLinks = [
-  { id: "research", title: "Research Papers", icon: "/assets/images/light-bulb-150x150.png" },
+  { id: "research", title: "Research Papers", icon: "/assets/images/light-bulb-64x64.webp" },
   { id: "portfolio", title: "Product Portfolio", icon: "/assets/images/web-design-150x150.png" },
-  { id: "video", title: "Video Production", icon: "/assets/images/online-video-150x150.png" },
+  { id: "video", title: "Video Production", icon: "/assets/images/online-video-64x64.webp" },
   { id: "music", title: "Music Collections", icon: "/assets/images/music-note-150x150.png" },
   { id: "art", title: "Various Collections", icon: "/assets/images/favourites-150x150.png" },
-  { id: "social", title: "Social Profiles", icon: "/assets/images/good-review-150x150.png" },
+  { id: "social", title: "Social Profiles", icon: "/assets/images/good-review-64x64.webp" },
 ];
 
 export const githubLinks = [

@@ -2,28 +2,14 @@ import { researchPapers } from "../content/siteContent";
 import { ExternalLinkCard } from "../components/ExternalLinkCard";
 import { ResponsiveImage } from "../components/ResponsiveImage";
 import { SectionFrame } from "../components/SectionFrame";
-import { SocialIcon } from "../components/SocialIcon";
 
 export function ResearchSection() {
   return (
     <SectionFrame
       id="research"
       className="research-section"
-      icon="/assets/images/light-bulb-150x150.png"
+      icon="/assets/images/light-bulb-64x64.webp"
       title="Research Papers"
-      action={
-        <a
-          className="research-section__scholar"
-          href="https://scholar.google.com/citations?hl=en&user=29gbSqUAAAAJ"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="research-section__scholar-icon" aria-hidden="true">
-            <SocialIcon type="scholar" />
-          </span>
-          Google Scholar
-        </a>
-      }
     >
       <div className="research-stack">
         {researchPapers.map((paper) => (

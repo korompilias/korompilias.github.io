@@ -8,7 +8,7 @@ export function ShortcutsSection() {
       <nav className="shortcut-grid" aria-label="Quick links">
         {quickLinks.map((item) => (
           <a key={item.id} className="inner-block shortcut-card" href={`#${item.id}`}>
-            <ResponsiveImage image={item.icon} alt="" aria-hidden="true" />
+            <ResponsiveImage image={item.icon} alt="" aria-hidden="true" width={24} height={24} />
             <span>{item.title}</span>
           </a>
         ))}

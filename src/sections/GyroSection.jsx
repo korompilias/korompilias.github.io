@@ -13,7 +13,7 @@ export function GyroSection() {
           <div className="feature-banner__logo-wrap">
             <ResponsiveImage
               image={{
-                src: "/assets/images/gyrogovernance_logo-300x300.png",
+                src: "/assets/images/gyrogovernance_logo.webp",
               }}
               className="feature-banner__logo"
               alt="Gyro Governance logo"
@@ -28,7 +28,12 @@ export function GyroSection() {
           </div>
           <div className="feature-banner__actions">
             <ActionButton href="https://gyrogovernance.com/">Website</ActionButton>
-            <ActionButton href="https://github.com/gyrogovernance">GitHub</ActionButton>
+            <ActionButton
+              href="https://github.com/gyrogovernance"
+              ariaLabel="Gyro Governance main GitHub organization"
+            >
+              GitHub
+            </ActionButton>
           </div>
         </div>
       </LiquidGlassCard>

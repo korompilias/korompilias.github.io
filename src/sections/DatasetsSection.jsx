@@ -25,7 +25,12 @@ export function DatasetsSection() {
           <h3>CGM</h3>
           <p>1,024 structured Q&A entries grounded in mathematical physics, for fine-tuning, RAG, and evaluation.</p>
           <div className="dataset-card__actions">
-            <ActionButton href="https://github.com/gyrogovernance/science/tree/main/docs/datasets">GitHub</ActionButton>
+            <ActionButton
+              href="https://github.com/gyrogovernance/science/tree/main/docs/datasets"
+              ariaLabel="GitHub repository for CGM dataset files"
+            >
+              GitHub
+            </ActionButton>
           </div>
         </article>
         <article className="inner-block dataset-card dataset-card--rose">

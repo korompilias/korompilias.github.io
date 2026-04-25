@@ -3,7 +3,7 @@ import { SectionFrame } from "../components/SectionFrame";
 
 export function VideosSection() {
   return (
-    <SectionFrame id="video" icon="/assets/images/online-video.png" title="Video Production">
+    <SectionFrame id="video" icon="/assets/images/online-video-64x64.webp" title="Video Production">
       <div className="video-grid">
         {videos.map((video) => (
           <article key={video.id} className="inner-block video-card">
