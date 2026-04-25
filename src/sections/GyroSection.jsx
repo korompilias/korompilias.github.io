@@ -13,9 +13,7 @@ export function GyroSection() {
           <div className="feature-banner__logo-wrap">
             <ResponsiveImage
               image={{
-                src: "/assets/images/gyrogovernance_logo-300x300.png",
-                webpSrcSet: "/assets/images/gyrogovernance_logo.webp 1024w",
-                sizes: "64px",
+                src: "/assets/images/gyrogovernance_logo-96x96.png",
               }}
               className="feature-banner__logo"
               alt="Gyro Governance logo"

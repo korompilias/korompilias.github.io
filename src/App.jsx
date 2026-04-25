@@ -5,16 +5,21 @@ import { GithubSection } from "./sections/GithubSection";
 import { GyroSection } from "./sections/GyroSection";
 import { SmartBitesSection } from "./sections/SmartBitesSection";
 import { DatasetsSection } from "./sections/DatasetsSection";
-import { NewsletterSection } from "./sections/NewsletterSection";
-import { ResearchSection } from "./sections/ResearchSection";
-import { PortfolioSection } from "./sections/PortfolioSection";
-import { VideosSection } from "./sections/VideosSection";
-import { MusicSection } from "./sections/MusicSection";
-import { CollectionsSection } from "./sections/CollectionsSection";
-import { SocialSection } from "./sections/SocialSection";
 import { ResponsiveImage } from "./components/ResponsiveImage";
 import { useReveal } from "./components/useReveal";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
+
+const NewsletterSection = lazy(() => import("./sections/NewsletterSection").then((module) => ({ default: module.NewsletterSection })));
+const ResearchSection = lazy(() => import("./sections/ResearchSection").then((module) => ({ default: module.ResearchSection })));
+const PortfolioSection = lazy(() => import("./sections/PortfolioSection").then((module) => ({ default: module.PortfolioSection })));
+const VideosSection = lazy(() => import("./sections/VideosSection").then((module) => ({ default: module.VideosSection })));
+const MusicSection = lazy(() => import("./sections/MusicSection").then((module) => ({ default: module.MusicSection })));
+const CollectionsSection = lazy(() => import("./sections/CollectionsSection").then((module) => ({ default: module.CollectionsSection })));
+const SocialSection = lazy(() => import("./sections/SocialSection").then((module) => ({ default: module.SocialSection })));
+
+function DeferredSectionFallback() {
+  return <div className="outer-card" aria-hidden="true" style={{ minHeight: 160 }} />;
+}
 
 function TopBar() {
   const [ref, isVisible] = useReveal();
@@ -22,13 +27,26 @@ function TopBar() {
   return (
     <header ref={ref} className={`topbar ${isVisible ? "is-visible" : ""}`}>
       <a className="topbar__avatar-link" href="/" aria-label="Home">
-        <ResponsiveImage image="/assets/images/cmd-4-150x150.png" className="topbar__avatar" alt="" aria-hidden="true" />
+        <ResponsiveImage
+          image="/assets/images/cmd-4-48x48.png"
+          className="topbar__avatar"
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+          fetchPriority="high"
+        />
       </a>
       <a className="topbar__title" href="/">
         Basil Korompilias
       </a>
       <a className="topbar__avatar-link" href="mailto:basilkorompilias@gmail.com" aria-label="Email Basil">
-        <ResponsiveImage image="/assets/images/messenger-1-150x150.png" className="topbar__avatar" alt="" aria-hidden="true" />
+        <ResponsiveImage
+          image="/assets/images/messenger-1-48x48.png"
+          className="topbar__avatar"
+          alt=""
+          aria-hidden="true"
+          loading="eager"
+        />
       </a>
     </header>
   );
@@ -81,13 +99,27 @@ function App() {
         <GyroSection />
         <SmartBitesSection />
         <DatasetsSection />
-        <NewsletterSection />
-        <ResearchSection />
-        <PortfolioSection />
-        <VideosSection />
-        <MusicSection />
-        <CollectionsSection />
-        <SocialSection />
+        <Suspense fallback={<DeferredSectionFallback />}>
+          <NewsletterSection />
+        </Suspense>
+        <Suspense fallback={<DeferredSectionFallback />}>
+          <ResearchSection />
+        </Suspense>
+        <Suspense fallback={<DeferredSectionFallback />}>
+          <PortfolioSection />
+        </Suspense>
+        <Suspense fallback={<DeferredSectionFallback />}>
+          <VideosSection />
+        </Suspense>
+        <Suspense fallback={<DeferredSectionFallback />}>
+          <MusicSection />
+        </Suspense>
+        <Suspense fallback={<DeferredSectionFallback />}>
+          <CollectionsSection />
+        </Suspense>
+        <Suspense fallback={<DeferredSectionFallback />}>
+          <SocialSection />
+        </Suspense>
       </main>
 
       <Footer />

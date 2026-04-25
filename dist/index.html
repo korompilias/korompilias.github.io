@@ -3,6 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="aoX1m7Y2R6pu8S48Tnqt1gOndDjryBjrDo_QDlIENrQ" />
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function gtag() { window.dataLayer.push(arguments); };
+
+      const loadAnalytics = () => {
+        if (window.__analyticsLoaded) {
+          return;
+        }
+
+        window.__analyticsLoaded = true;
+
+        const script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9TMMZXL69Y";
+        script.async = true;
+        document.head.appendChild(script);
+
+        window.gtag("js", new Date());
+        window.gtag("config", "G-9TMMZXL69Y");
+      };
+
+      if ("requestIdleCallback" in window) {
+        window.addEventListener("load", () => {
+          window.requestIdleCallback(loadAnalytics, { timeout: 4000 });
+        }, { once: true });
+      } else {
+        window.addEventListener("load", () => {
+          window.setTimeout(loadAnalytics, 2000);
+        }, { once: true });
+      }
+    </script>
     <title>Basil Korompilias | AI Safety, Governance, Adoption</title>
     <meta
       name="description"
@@ -62,7 +93,7 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-BZBTL_jz.js"></script>
+    <script type="module" crossorigin src="/assets/index-DaR6N5kR.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-5NIccHYG.css">
   </head>
   <body>

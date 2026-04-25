@@ -13,12 +13,10 @@ export function HeroSection() {
           <div className="hero-shell__photo" aria-hidden="true">
             <ResponsiveImage
               image={{
-                src: "/assets/images/1708762919806-768x768.jpg",
-                webpSrcSet:
-                  "/assets/images/1708762919806-768x768.webp 768w, /assets/images/1708762919806-scaled.webp 2048w",
+                src: "/assets/images/1708762919806-768x768.webp",
                 srcSet:
-                  "/assets/images/1708762919806-768x768.jpg 768w, /assets/images/1708762919806-scaled.jpg 2048w",
-                sizes: "(max-width: 760px) 100vw, 40vw",
+                  "/assets/images/1708762919806-768x768.webp 768w, /assets/images/1708762919806-scaled.webp 2048w",
+                sizes: "(max-width: 760px) calc(100vw - 44px), 262px",
               }}
               alt=""
               className="hero-shell__photo-image"

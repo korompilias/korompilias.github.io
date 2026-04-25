@@ -4,12 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="aoX1m7Y2R6pu8S48Tnqt1gOndDjryBjrDo_QDlIENrQ" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9TMMZXL69Y"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9TMMZXL69Y');
+      window.gtag = function gtag() { window.dataLayer.push(arguments); };
+
+      const loadAnalytics = () => {
+        if (window.__analyticsLoaded) {
+          return;
+        }
+
+        window.__analyticsLoaded = true;
+
+        const script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9TMMZXL69Y";
+        script.async = true;
+        document.head.appendChild(script);
+
+        window.gtag("js", new Date());
+        window.gtag("config", "G-9TMMZXL69Y");
+      };
+
+      if ("requestIdleCallback" in window) {
+        window.addEventListener("load", () => {
+          window.requestIdleCallback(loadAnalytics, { timeout: 4000 });
+        }, { once: true });
+      } else {
+        window.addEventListener("load", () => {
+          window.setTimeout(loadAnalytics, 2000);
+        }, { once: true });
+      }
     </script>
     <title>Basil Korompilias | AI Safety, Governance, Adoption</title>
     <meta

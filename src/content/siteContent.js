@@ -1,10 +1,10 @@
 export const quickLinks = [
-  { id: "research", title: "Research Papers", icon: "/assets/images/light-bulb-150x150.png" },
-  { id: "portfolio", title: "Product Portfolio", icon: "/assets/images/web-design-150x150.png" },
-  { id: "video", title: "Video Production", icon: "/assets/images/online-video-150x150.png" },
-  { id: "music", title: "Music Collections", icon: "/assets/images/music-note-150x150.png" },
-  { id: "art", title: "Various Collections", icon: "/assets/images/favourites-150x150.png" },
-  { id: "social", title: "Social Profiles", icon: "/assets/images/good-review-150x150.png" },
+  { id: "research", title: "Research Papers", icon: "/assets/images/light-bulb-48x48.png" },
+  { id: "portfolio", title: "Product Portfolio", icon: "/assets/images/web-design-48x48.png" },
+  { id: "video", title: "Video Production", icon: "/assets/images/online-video-48x48.png" },
+  { id: "music", title: "Music Collections", icon: "/assets/images/music-note-48x48.png" },
+  { id: "art", title: "Various Collections", icon: "/assets/images/favourites-48x48.png" },
+  { id: "social", title: "Social Profiles", icon: "/assets/images/good-review-48x48.png" },
 ];
 
 export const githubLinks = [
@@ -101,10 +101,8 @@ export const researchPapers = [
       "A governance framework that redefines AI alignment and ethics as emergent properties of recursive Human-AI cooperation, rather than behavioural outputs subject to tuning or enforcement.",
     image: {
       src: "/assets/images/AIQ_Cover-768x994.jpg",
-      webpSrcSet:
-        "/assets/images/AIQ_Cover-768x994.webp 768w, /assets/images/AIQ_Cover-791x1024.webp 791w, /assets/images/AIQ_Cover-1186x1536.webp 1186w, /assets/images/AIQ_Cover-1582x2048.webp 1582w, /assets/images/AIQ_Cover.webp 2048w",
       srcSet:
-        "/assets/images/AIQ_Cover-232x300.jpg 232w, /assets/images/AIQ_Cover-768x994.jpg 768w, /assets/images/AIQ_Cover-791x1024.jpg 791w, /assets/images/AIQ_Cover-1186x1536.jpg 1186w, /assets/images/AIQ_Cover-1582x2048.jpg 1582w, /assets/images/AIQ_Cover.jpg 2048w",
+        "/assets/images/AIQ_Cover-232x300.jpg 232w, /assets/images/AIQ_Cover-768x994.jpg 768w, /assets/images/AIQ_Cover-791x1024.jpg 791w",
       sizes: "(max-width: 520px) 100vw, (max-width: 760px) 40vw, 220px",
     },
     alt: "AI.Q research paper cover.",
@@ -117,8 +115,7 @@ export const researchPapers = [
     body:
       "Mathematical physics foundations for AI alignment and governance. Formal proofs, geometric analyses, and axioms grounding safety and governance work from first principles.",
     image: {
-      src: "/assets/images/CGM_Cover_Letter.jpg",
-      webpSrcSet: "/assets/images/CGM_Cover_Letter.webp 2048w",
+      src: "/assets/images/CGM_Cover_Letter-400x565.jpg",
       sizes: "(max-width: 520px) 100vw, (max-width: 760px) 40vw, 220px",
     },
     href: "https://doi.org/10.5281/zenodo.17794470",
@@ -131,11 +128,9 @@ export const researchPapers = [
     body:
       "A unified physics model redefining momentum and gravity as complementary facets of energy dynamics, integrating gravitational dynamics into quantum field theory and unifying all fundamental interactions.",
     image: {
-      src: "/assets/images/New_Physics-768x1086.jpg",
-      webpSrcSet:
-        "/assets/images/New_Physics-1086x1536.webp 1086w, /assets/images/New_Physics-1449x2048.webp 1449w, /assets/images/New_Physics-scaled.webp 2048w",
+      src: "/assets/images/New_Physics-212x300.jpg",
       srcSet:
-        "/assets/images/New_Physics-212x300.jpg 212w, /assets/images/New_Physics-724x1024.jpg 724w, /assets/images/New_Physics-768x1086.jpg 768w, /assets/images/New_Physics-1086x1536.jpg 1086w, /assets/images/New_Physics-1449x2048.jpg 1449w, /assets/images/New_Physics-scaled.jpg 2048w",
+        "/assets/images/New_Physics-212x300.jpg 212w, /assets/images/New_Physics-724x1024.jpg 724w, /assets/images/New_Physics-768x1086.jpg 768w",
       sizes: "(max-width: 520px) 100vw, (max-width: 760px) 40vw, 220px",
     },
     alt: "New Physics research paper cover.",
@@ -149,10 +144,8 @@ export const researchPapers = [
       "Explores how ethical conduct naturally emerges from complex interactions within multiple dimensions of awareness rather than being imposed by external constructs or policies.",
     image: {
       src: "/assets/images/AI_Canon_Cover-768x1086.jpg",
-      webpSrcSet:
-        "/assets/images/AI_Canon_Cover-724x1024.webp 724w, /assets/images/AI_Canon_Cover-768x1086.webp 768w, /assets/images/AI_Canon_Cover-1086x1536.webp 1086w, /assets/images/AI_Canon_Cover-1449x2048.webp 1449w, /assets/images/AI_Canon_Cover-scaled.webp 2048w",
       srcSet:
-        "/assets/images/AI_Canon_Cover-212x300.jpg 212w, /assets/images/AI_Canon_Cover-724x1024.jpg 724w, /assets/images/AI_Canon_Cover-768x1086.jpg 768w, /assets/images/AI_Canon_Cover-1086x1536.jpg 1086w, /assets/images/AI_Canon_Cover-1449x2048.jpg 1449w, /assets/images/AI_Canon_Cover-scaled.jpg 2048w",
+        "/assets/images/AI_Canon_Cover-212x300.jpg 212w, /assets/images/AI_Canon_Cover-724x1024.jpg 724w, /assets/images/AI_Canon_Cover-768x1086.jpg 768w",
       sizes: "(max-width: 520px) 100vw, (max-width: 760px) 40vw, 220px",
     },
     alt: "AI Canon research paper cover.",
@@ -166,10 +159,8 @@ export const researchPapers = [
       "Proposes that Chirality is a dynamic structural principle underpinning the universe from its most fundamental particles to its largest structures, offering a unifying Theory of Everything.",
     image: {
       src: "/assets/images/Chirality_Cover-768x1086.jpg",
-      webpSrcSet:
-        "/assets/images/Chirality_Cover-724x1024.webp 724w, /assets/images/Chirality_Cover-768x1086.webp 768w, /assets/images/Chirality_Cover-1087x1536.webp 1087w, /assets/images/Chirality_Cover-1449x2048.webp 1449w, /assets/images/Chirality_Cover-scaled.webp 2048w",
       srcSet:
-        "/assets/images/Chirality_Cover-212x300.jpg 212w, /assets/images/Chirality_Cover-724x1024.jpg 724w, /assets/images/Chirality_Cover-768x1086.jpg 768w, /assets/images/Chirality_Cover-1087x1536.jpg 1087w, /assets/images/Chirality_Cover-1449x2048.jpg 1449w, /assets/images/Chirality_Cover-scaled.jpg 2048w",
+        "/assets/images/Chirality_Cover-212x300.jpg 212w, /assets/images/Chirality_Cover-724x1024.jpg 724w, /assets/images/Chirality_Cover-768x1086.jpg 768w",
       sizes: "(max-width: 520px) 100vw, (max-width: 760px) 40vw, 220px",
     },
     alt: "Chirality research paper cover.",
@@ -182,11 +173,9 @@ export const researchPapers = [
     body:
       "A three-step protocol offering a structured, iterative approach to Augmented Governance, designed to enhance decision-making, promote ethical governance, and empower individuals and institutions.",
     image: {
-      src: "/assets/images/Changes_Cover-768x1086.jpg",
-      webpSrcSet:
-        "/assets/images/Changes_Cover-1086x1536.webp 1086w, /assets/images/Changes_Cover-1449x2048.webp 1449w, /assets/images/Changes_Cover-scaled.webp 2048w",
+      src: "/assets/images/Changes_Cover-212x300.jpg",
       srcSet:
-        "/assets/images/Changes_Cover-212x300.jpg 212w, /assets/images/Changes_Cover-724x1024.jpg 724w, /assets/images/Changes_Cover-768x1086.jpg 768w, /assets/images/Changes_Cover-1086x1536.jpg 1086w, /assets/images/Changes_Cover-1449x2048.jpg 1449w, /assets/images/Changes_Cover-scaled.jpg 2048w",
+        "/assets/images/Changes_Cover-212x300.jpg 212w, /assets/images/Changes_Cover-724x1024.jpg 724w, /assets/images/Changes_Cover-768x1086.jpg 768w",
       sizes: "(max-width: 520px) 100vw, (max-width: 760px) 40vw, 220px",
     },
     alt: "Changes Protocol research paper cover.",
