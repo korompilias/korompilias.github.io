@@ -1,10 +1,10 @@
 export const quickLinks = [
-  { id: "research", title: "Research Papers", icon: "/assets/images/light-bulb-48x48.png" },
-  { id: "portfolio", title: "Product Portfolio", icon: "/assets/images/web-design-48x48.png" },
-  { id: "video", title: "Video Production", icon: "/assets/images/online-video-48x48.png" },
-  { id: "music", title: "Music Collections", icon: "/assets/images/music-note-48x48.png" },
-  { id: "art", title: "Various Collections", icon: "/assets/images/favourites-48x48.png" },
-  { id: "social", title: "Social Profiles", icon: "/assets/images/good-review-48x48.png" },
+  { id: "research", title: "Research Papers", icon: "/assets/images/light-bulb-150x150.png" },
+  { id: "portfolio", title: "Product Portfolio", icon: "/assets/images/web-design-150x150.png" },
+  { id: "video", title: "Video Production", icon: "/assets/images/online-video-150x150.png" },
+  { id: "music", title: "Music Collections", icon: "/assets/images/music-note-150x150.png" },
+  { id: "art", title: "Various Collections", icon: "/assets/images/favourites-150x150.png" },
+  { id: "social", title: "Social Profiles", icon: "/assets/images/good-review-150x150.png" },
 ];
 
 export const githubLinks = [
@@ -115,7 +115,7 @@ export const researchPapers = [
     body:
       "Mathematical physics foundations for AI alignment and governance. Formal proofs, geometric analyses, and axioms grounding safety and governance work from first principles.",
     image: {
-      src: "/assets/images/CGM_Cover_Letter-400x565.jpg",
+      src: "/assets/images/CGM_Cover_Letter.jpg",
       sizes: "(max-width: 520px) 100vw, (max-width: 760px) 40vw, 220px",
     },
     href: "https://doi.org/10.5281/zenodo.17794470",

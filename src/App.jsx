@@ -28,7 +28,7 @@ function TopBar() {
     <header ref={ref} className={`topbar ${isVisible ? "is-visible" : ""}`}>
       <a className="topbar__avatar-link" href="/" aria-label="Home">
         <ResponsiveImage
-          image="/assets/images/cmd-4-48x48.png"
+          image="/assets/images/cmd-4-150x150.png"
           className="topbar__avatar"
           alt=""
           aria-hidden="true"
@@ -41,7 +41,7 @@ function TopBar() {
       </a>
       <a className="topbar__avatar-link" href="mailto:basilkorompilias@gmail.com" aria-label="Email Basil">
         <ResponsiveImage
-          image="/assets/images/messenger-1-48x48.png"
+          image="/assets/images/messenger-1-150x150.png"
           className="topbar__avatar"
           alt=""
           aria-hidden="true"
