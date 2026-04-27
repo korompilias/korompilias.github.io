@@ -9,7 +9,7 @@ export function SmartBitesSection() {
         <div className="feature-split__media inner-block">
           <ResponsiveImage
             image={{
-              src: "/assets/images/638919d9-c2dd-4767-85b1-3e84160bf256-1024x1024.jpg",
+              src: "/assets/images/smartbites_foodtruck.webp",
               webpSrcSet: "/assets/images/638919d9-c2dd-4767-85b1-3e84160bf256-1024x1024.webp 1024w",
               sizes: "(max-width: 760px) 100vw, 40vw",
             }}
