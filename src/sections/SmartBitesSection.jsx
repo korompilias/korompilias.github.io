@@ -18,7 +18,7 @@ export function SmartBitesSection() {
           />
         </div>
         <div className="feature-split__copy inner-block">
-          <h2>GenAI Prompt Engineering for People-Powered AI-Augmented Governance & Change Management</h2>
+          <h2>GenAI Prompt Engineering for AI-Empowered Governance & Change Management</h2>
           <p>Smart Bites aims to Democratize Change Management, Making it Accessible to People from All Walks of Life.</p>
           <p>I've developed a Formal Process for AI-Augmented Governance, enabling Decentralized Decision-Making and Data-empowered Insights.</p>
           <p>Open and serving Free Bite-sized AI Guides at smartbites.github.io.</p>
