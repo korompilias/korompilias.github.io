@@ -4,7 +4,7 @@ import { ExternalLinkCard } from "../components/ExternalLinkCard";
 import { ResponsiveImage } from "../components/ResponsiveImage";
 import { SectionFrame } from "../components/SectionFrame";
 
-const portfolioHref = "https://www.notion.so/korompilias/Portfolio-b5f6143a8c6042ef8dd2a42c16174403";
+const portfolioHref = "https://www.figma.com/design/4ncIEiSREvMVYvaVPnYLxC/Basil-Korompilias---Product-Portfolio?node-id=0-1&p=f";
 
 export function PortfolioSection() {
   return (
