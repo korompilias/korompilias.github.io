@@ -3,6 +3,7 @@ import { ShortcutsSection } from "./sections/ShortcutsSection";
 import { CredentialsSection } from "./sections/CredentialsSection";
 import { GithubSection } from "./sections/GithubSection";
 import { GyroSection } from "./sections/GyroSection";
+import { TravelSection } from "./sections/TravelSection";
 import { SmartBitesSection } from "./sections/SmartBitesSection";
 import { DatasetsSection } from "./sections/DatasetsSection";
 import { ResponsiveImage } from "./components/ResponsiveImage";
@@ -97,6 +98,7 @@ function App() {
         <ShortcutsSection />
         <GithubSection />
         <GyroSection />
+        <TravelSection />
         <SmartBitesSection />
         <DatasetsSection />
         <Suspense fallback={<DeferredSectionFallback />}>

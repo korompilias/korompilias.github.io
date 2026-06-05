@@ -640,6 +640,10 @@ a.inner-block:hover,
   border-color: rgba(162, 190, 255, 0.72);
 }
 
+.feature-card--travel {
+  border-color: rgba(120, 210, 170, 0.72);
+}
+
 .feature-banner {
   display: flex;
   flex-direction: column;
@@ -694,6 +698,10 @@ a.inner-block:hover,
     center center / cover no-repeat;
   opacity: 0.16;
   pointer-events: none;
+}
+
+.feature-banner--travel::before {
+  background: url("/assets/images/travel.webp") center center / cover no-repeat;
 }
 
 .feature-banner > * {
